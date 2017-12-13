@@ -1,83 +1,16 @@
-<!DOCTYPE html>
 <html>
-<style type="text/css">
-	body{
-		background-color:bisque;
-		font-family:bookman;
-	}
-
-	hr {
-		border-color:pink;
-    border-width: 3px;
-		padding:0;
-	}
-
-	.heading{
-		border-radius: 25px;
-		background:rosybrown;
-		text-align:center;
-		color:khaki;
-		padding: 5px  5px;
-		font-family:courier,sans-Serif;
-	}
-
-	.menu{
-		background:wheat;
-		font-family:Trebuchet MS,sans-Serif;
-		color:maroon;
-		align:center;
-	}
-
-	a{
-		color:maroon;
-	}
-
-	ul#menu li {
-    display:inline;
-		align:center;
-		margin:auto;
-	}
-	nav ul li a{
-		float:left;
-		text-decoration:none;
-		font-family:Trebuchet MS,sans-Serif;
-		color:maroon;
-		background-color:khaki;
-		margin:0px 10px;
-		padding:5px 15px;
-	}
-	nav ul li a:hover{
-		display:table;
-		float:left;
-		text-decoration:none;
-		font-family:comic sans MS,sans-Serif;
-		color:maroon;
-		background-color:darkkhaki;
-	}
-</style>
+<head>
+<title> Simple Calculator</title>
+  <script>
+    function calc(){
+      x = document.getElementById('equation').value;
+      document.getElementById('result').value = eval(x);
+    }
+  </script>
+</head>
 <body>
-	<div class="heading">
-	<h1>	Library </h1>
-	</div>
-	<hr>
-	<h3 align="center">
-	<nav align="center">
-		<ul id="menu">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="login.html">Login</a></li>
-			<li><a href="signup.html">Sign Up</a></li>
-			<li><a href="about.html">About Us</a></li>
-		</ul>
-	</nav>
-	<!---
-	<div class="menu">
-		<ul id="menu" align="center">
-			<li title="Click to open Soft-Drink menu"><a href="soft-drink.html">Soft-Drinks</a></li>
-			<li title="Click to open Coffee menu"><a href="coffee.html">Coffee</a></li>
-			<li title="Click to open Tea menu"><a href="tea.html">Tea</a></li>
-		</ul>
-	</div>
-	<img src="softdrink.png" height="150">
-	<img src="coffee.png" height="100"> --->
+    <input type="text" id="equation"/>
+    <input type="button" value="calculate" onclick="return calc()"/>
+    <input type="text" id="result" disable />
 </body>
 </html>
